@@ -1,6 +1,5 @@
 import { Component, OnInit, NgZone} from '@angular/core';
-import {Route, Router} from '@angular/router';
-import { from } from 'rxjs';
+import {Router} from '@angular/router';
 import {CrudService} from '../../service/crud.service';
 import {FormGroup, FormBuilder} from '@angular/forms';
 @Component({
@@ -33,7 +32,7 @@ export class AddBookComponent implements OnInit {
     this.crudService.addBook(this.bookForm.value)
     .subscribe(()=>{
       console.log('Dat added successfuly');
-      this.ngZone.run(()=>this.router.navigateByUrl('/books-list'))
+      this.ngZone.run(()=>this.router.navigateByUrl('/book-list'))
     }, (err)=>{
       console.log(err);
     })

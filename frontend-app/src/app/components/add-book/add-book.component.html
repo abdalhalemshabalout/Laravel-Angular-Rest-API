@@ -1,6 +1,6 @@
 <div class="row justify-content-center mt-5">
     <div class="col-md-4">
-        <form [formGroup]="bookForm" (ngSubmit)="onSubmit">
+        <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
             <div class="mb-3">
               <label class="form-label">Name</label>
               <input type="email" class="form-control"  formControlName="name" required>
@@ -10,7 +10,7 @@
               <input type="email" class="form-control"  formControlName="name" required>
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+              <label for="exampleFormControlTextarea1" class="form-label">Description</label>
               <textarea class="form-control" rows="3" formControlName="description"></textarea>
             </div>
             <div class="mb-3">
